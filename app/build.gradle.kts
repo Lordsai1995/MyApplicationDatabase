@@ -3,7 +3,8 @@
     plugins {
         id("com.android.application")
         id("org.jetbrains.kotlin.android")
-        id("com.google.devtools.ksp") version "1.9.23-1.0.20" // ✅ This line is the fix
+        id("com.google.devtools.ksp")
+        alias(libs.plugins.kotlin.compose)
     }
 
 
@@ -60,19 +61,19 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     // Room
-    implementation ("androidx.room:room-runtime:2.6.1")
-    implementation ("androidx.room:room-ktx:2.6.1")
-    ksp ("androidx.room:room-compiler:2.6.1")
+    implementation ("androidx.room:room-runtime:2.7.2")
+    implementation ("androidx.room:room-ktx:2.7.2")
+    ksp ("androidx.room:room-compiler:2.7.2")
 
 // ViewModel + Lifecycle
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.1")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.1")
 
 // Compose Material3 (or change to material if using that)
     implementation ("androidx.compose.material3:material3:1.2.0")
 
 // Coroutines (required for Room)
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
 }
 
 
