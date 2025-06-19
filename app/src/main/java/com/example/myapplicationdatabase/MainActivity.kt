@@ -1,7 +1,6 @@
 package com.example.myapplicationdatabase
 
 import android.os.Bundle
-import android.app.Application
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
